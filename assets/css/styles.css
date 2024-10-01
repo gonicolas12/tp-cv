@@ -1,0 +1,80 @@
+/* styles.css */
+
+html, body {
+    height: 100%; /* Assurer que html et body occupent toute la hauteur */
+    margin: 0; /* Enlever la marge par défaut */
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header {
+    background-color: #7f858b;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 140px); /* Ajustement pour que le footer soit visible */
+    margin: 0; /* Enlever la marge par défaut */
+}
+
+footer {
+    background-color: #7f858b;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Prendre toute la largeur */
+    position: absolute; /* Positionner le footer en bas de la page */
+    bottom: 0; /* Placer le footer tout en bas */
+}
+
+footer p {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

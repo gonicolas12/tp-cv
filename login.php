@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form method="post" action="">
     <label>Email:</label>
-    <input type="email" name="email" required>
+    <input name="email" required>
     <label>Mot de passe:</label>
     <input type="password" name="password" required>
     <button type="submit">Se connecter</button>

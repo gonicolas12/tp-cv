@@ -1,4 +1,8 @@
-<?php include('includes/header.php'); ?>
-<h1>Bienvenue sur mon Portfolio</h1>
-<p>Voici mon site pour présenter mon CV et mes projets.</p>
-<?php include('includes/footer.php'); ?>
+<?php include 'includes/header.php'; ?>
+
+<main>
+    <h1>Bienvenue sur mon portfolio</h1>
+    <p>Découvrez mes projets et mon parcours professionnel.</p>
+</main>
+
+<?php include 'includes/footer.php'; ?>
