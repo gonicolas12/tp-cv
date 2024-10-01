@@ -13,27 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<form method="post" action="">
-    <label>Nom:</label>
-    <input type="text" name="name" required>
-    <label>Email:</label>
-    <input type="email" name="email" required>
-    <label>Message:</label>
-    <textarea name="message" required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
+<?php include 'includes/header.php'; ?>
 
-<!-- Carte de la ville -->
-<div id="map" style="height: 400px;"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
-<script>
-    function initMap() {
-        var city = {lat: 48.8566, lng: 2.3522}; // Paris, par exemple
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: city
-        });
-        var marker = new google.maps.Marker({position: city, map: map});
-    }
-    initMap();
-</script>
+<main>
+    <h1>Contactez-moi</h1>
+    <form method="post" action="">
+        <label>Nom:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Message:</label>
+        <textarea name="message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</main>
+
+<?php include 'includes/footer.php'; ?>

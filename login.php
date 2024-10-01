@@ -20,11 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<form method="post" action="">
+<?php include 'includes/header.php'; ?>
+
+<form class="login-form" method="post" action="">
     <label>Email:</label>
     <input name="email" required>
-    <label>Mot de passe:</label>
+    <label class="password-text">Mot de passe:</label>
     <input type="password" name="password" required>
-    <button type="submit">Se connecter</button>
+    <br>
+    <button type="submit" class="login-btn">Se connecter</button>
     <?php if(isset($error)) echo "<p>$error</p>"; ?>
 </form>
+
+<?php include 'includes/footer.php'; ?>
