@@ -1,11 +1,7 @@
-/* styles.css */
-
 html, body {
-    height: 100%; /* Assurer que html et body occupent toute la hauteur */
-    margin: 0; /* Enlever la marge par défaut */
+    height: 100%;
+    margin: 0;
 }
-
-
 
 ul {
     list-style-type: none;
