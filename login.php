@@ -11,8 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $query);
     $user = mysqli_fetch_assoc($result);
 
-    if ($user && password_verify($password, $user['password'])) {
+    if ($user && ($password == $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
+        $_SESSION['first_name'] = $user['first_name'];
         $_SESSION['role'] = $user['role'];
         header("Location: profile.php");
         exit();
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="password" name="password" required>
     <br>
     <button type="submit" class="login-btn">Se connecter</button>
-    <?php if(isset($error)) echo "<p>$error</p>"; ?>
+    <?php if (isset($error)) echo "<p>$error</p>"; ?>
 </form>
 
 <?php include 'includes/footer.php'; ?>
