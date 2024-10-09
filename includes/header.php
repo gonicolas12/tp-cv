@@ -27,7 +27,8 @@ if (session_status() === PHP_SESSION_NONE) {
                 <li><a href="/tp-cv/cv.php">Mon CV</a></li>
                 <li><a href="/tp-cv/profile.php">Profil</a></li>
                 <li><a href="/tp-cv/logout.php">Déconnexion</a></li>
-                <li>Bienvenue, <?php echo isset($_SESSION['first_name']) ? $_SESSION['first_name'] : 'Invité'; ?></li>
+                <li>Bienvenue, <?php echo $_SESSION['first_name']; ?></li>
+                <li style="float: right;">Rôle : <?php echo $_SESSION['role']; ?></li>
             <?php else: ?>
                 <li><a href="/tp-cv/login.php">Connexion</a></li>
             <?php endif; ?>
