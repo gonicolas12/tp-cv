@@ -24,7 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="email" name="email" required>
         <label>Message:</label>
         <textarea name="message" required></textarea>
-        <button type="submit">Envoyer</button>
+        <button class="button">
+            <span class="button_lg">
+                <span class="button_sl"></span>
+                <span class="button_text">Envoyer</span>
+            </span>
+        </button>
     </form>
 </main>
 

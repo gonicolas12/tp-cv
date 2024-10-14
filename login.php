@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/headerLogin.php'; ?>
 
 <form class="login-form" method="post" action="">
     <label>Email:</label>
@@ -31,8 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label class="password-text">Mot de passe:</label>
     <input type="password" name="password" required>
     <br>
-    <button type="submit" class="login-btn">Se connecter</button>
-    <?php if (isset($error)) echo "<p>$error</p>"; ?>
+    <button class="button">
+        <span class="button_lg">
+            <span class="button_sl"></span>
+            <span class="button_text">Se connecter</span>
+        </span>
+    </button> <?php if (isset($error)) echo "<p>$error</p>"; ?>
 </form>
 
 <?php include 'includes/footer.php'; ?>
