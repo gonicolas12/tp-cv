@@ -9,6 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV/Portfolio</title>
+    <link rel="icon" href="assets/img/user-solid.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
