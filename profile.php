@@ -25,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
-    
+
     // Mettre à jour la base de données
     $query = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', email = '$email' WHERE id = $user_id";
     mysqli_query($conn, $query);
-    
+
     // Mettre à jour la session avec le nouveau prénom
     $_SESSION['first_name'] = $first_name;
 
@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="button_sl"></span>
             <span class="button_text">Mettre à jour</span>
         </span>
-    </button></form>
+    </button>
+</form>
 
 <?php include 'includes/footer.php'; ?>

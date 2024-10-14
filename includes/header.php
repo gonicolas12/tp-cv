@@ -25,6 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <li><a href="/tp-cv/contact.php">Contact</a></li>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <li><a href="/tp-cv/cv.php">Mon CV</a></li>
+                <li><a href="/tp-cv/view_cv.php">Voir mon CV</a></li>
                 <li><a href="/tp-cv/profile.php">Profil</a></li>
                 <li><a href="/tp-cv/logout.php">Déconnexion</a></li>
                 <li>Bienvenue, <?php echo $_SESSION['first_name']; ?></li>
