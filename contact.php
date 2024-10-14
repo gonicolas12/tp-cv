@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include 'includes/header.php'; ?>
 
 <main>
-    <h1>Contactez-moi</h1>
+    <h2>Contactez-moi</h2>
     <form method="post" action="">
         <label>Nom:</label>
         <input type="text" name="name" required>

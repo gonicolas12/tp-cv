@@ -6,7 +6,10 @@ body {
 
 p,
 a,
-h1 {
+h1,
+h2,
+li {
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }

@@ -48,7 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="text" name="last_name" value="<?php echo isset($user['last_name']) ? $user['last_name'] : ''; ?>" required>
     <label>Email:</label>
     <input type="email" name="email" value="<?php echo isset($user['email']) ? $user['email'] : ''; ?>" required>
-    <button type="submit">Mettre à jour</button>
-</form>
+    <button class="button">
+        <span class="button_lg">
+            <span class="button_sl"></span>
+            <span class="button_text">Mettre à jour</span>
+        </span>
+    </button></form>
 
 <?php include 'includes/footer.php'; ?>
