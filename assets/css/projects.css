@@ -1,0 +1,57 @@
+.button-icon-git {
+    display: flex;
+    border: 3px #fff solid;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.icon-git {
+    background-color: #fff;
+    padding: 10px 10px 5px 10px;
+}
+
+.icon-git svg {
+    width: 50px;
+    height: 50px;
+}
+
+.cube-git {
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    width: 400px;
+    height: 42px;
+}
+
+.button-icon-git:hover {
+    border-color: #ff4655;
+}
+
+.button-icon-git:hover .cube-git {
+    transform: rotateX(90deg);
+}
+
+.side-git {
+    position: absolute;
+    height: 69px;
+    width: 400px;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.top-git {
+    background: #ff4655;
+    color: #fff;
+    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front-git {
+    background: #222229;
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+}

@@ -242,8 +242,8 @@ footer a:hover {
     background-color: #ff4655;
     left: 50px;
     top: 0px;
-    width: 150px;
-    height: 150px;
+    width: 700px;
+    height: 300px;
     animation-delay: -800ms;
 }
 
@@ -251,8 +251,8 @@ footer a:hover {
     background-color: #ff2233;
     left: 160px;
     top: -80px;
-    width: 30px;
-    height: 30px;
+    width: 250px;
+    height: 180px;
     animation-delay: -1800ms;
 }
 
