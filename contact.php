@@ -1,14 +1,36 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "tonemail@example.com";
-    $subject = "Message de " . $_POST['name'];
-    $message = $_POST['message'];
-    $headers = "From: " . $_POST['email'];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Votre message a été envoyé.";
-    } else {
-        echo "Erreur lors de l'envoi du message.";
+require 'vendor/autoload.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuration du serveur SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Serveur SMTP de Gmail
+        $mail->SMTPAuth = true;
+        $mail->Username = 'projectynov@gmail.com';
+        $mail->Password = 'tlef votn psyr hjgq';
+        $mail->SMTPSecure = 'tls'; // Activer le chiffrement TLS
+        $mail->Port = 587; // Port TCP pour TLS
+
+        // Destinataires
+        $mail->setFrom('projectynov@gmail.com', $_POST['name']);
+        $mail->addAddress('projectynov@gmail.com'); // Destinataire (ton adresse email)
+
+        // Contenu
+        $mail->isHTML(true);
+        $mail->Subject = "Message de " . $_POST['name'];
+        $mail->Body = nl2br($_POST['message']);
+        $mail->AltBody = $_POST['message'];
+
+        // Envoi de l'email
+        $mail->send();
+    } catch (Exception $e) {
+        echo "Erreur lors de l'envoi du message. Mailer Error: {$mail->ErrorInfo}";
     }
 }
 ?>

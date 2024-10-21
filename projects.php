@@ -12,7 +12,7 @@
             </div>
             <div class="cube-git">
                 <span class="side-git front-git">Mes projets</span>
-                <span class="side-git top-git">Visitez mon Github</span>
+                <span class="side-git top-git">Visitez mon Github !</span>
             </div>
         </div>
 
