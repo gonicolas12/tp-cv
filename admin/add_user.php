@@ -15,26 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $role = $_POST['role'];
 
-    $query = "INSERT INTO users (first_name, last_name, email, password, role) VALUES ('$first_name', '$last_name', '$email', '$password', '$role')";
-    mysqli_query($conn, $query);
-    echo "Utilisateur ajouté.";
-}
-?>
+    // Vérifier si l'email existe déjà
+    $check_query = "SELECT * FROM users WHERE email = '$email'";
+    $check_result = mysqli_query($conn, $check_query);
 
-<h2>Ajouter un Utilisateur</h2>
-<form method="post" action="">
-    <label>Prénom:</label>
-    <input type="text" name="first_name" required>
-    <label>Nom:</label>
-    <input type="text" name="last_name" required>
-    <label>Email:</label>
-    <input type="email" name="email" required>
-    <label>Mot de passe:</label>
-    <input type="password" name="password" required>
-    <label>Rôle:</label>
-    <select name="role">
-        <option value="user">Utilisateur</option>
-        <option value="admin">Administrateur</option>
-    </select>
-    <button type="submit">Ajouter</button>
-</form>
+    if (mysqli_num_rows($check_result) > 0) {
+        // Si l'email existe déjà
+        echo "Email déjà utilisé.";
+    } else {
+        // Si l'email est unique, insérer l'utilisateur
+        $query = "INSERT INTO users (first_name, last_name, email, password, role) VALUES ('$first_name', '$last_name', '$email', '$password', '$role')";
+        mysqli_query($conn, $query);
+        echo "Utilisateur ajouté.";
+        header("Location: index.php");
+    }
+}

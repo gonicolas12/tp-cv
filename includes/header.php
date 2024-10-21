@@ -32,7 +32,14 @@ if (session_status() === PHP_SESSION_NONE) {
                     <li><a href="/tp-cv/profile.php">Profil</a></li>
                     <li><a href="/tp-cv/logout.php">Déconnexion</a></li>
                     <li>Bienvenue, <?php echo $_SESSION['first_name']; ?></li>
-                    <li style="float: right;">Rôle : <?php echo $_SESSION['role']; ?></li>
+                    
+                    <!-- Si l'utilisateur est admin, afficher le lien admin -->
+                    <?php if ($_SESSION['role'] == 'admin'): ?>
+                        <li style="float: right;">Rôle : <a href="/tp-cv/admin/index.php">admin</a></li>
+                    <!-- Sinon afficher rôle user sans lien  -->
+                    <?php else: ?>
+                        <li style="float: right;">Rôle : user</li>
+                    <?php endif; ?>
                 <?php else: ?>
                     <li><a href="/tp-cv/login.php">Connexion</a></li>
                 <?php endif; ?>

@@ -8,16 +8,19 @@ if ($_SESSION['role'] != 'admin') {
     exit();
 }
 
-// Récupérer la liste des utilisateurs
-$query = "SELECT * FROM users";
+// Récupérer la liste des utilisateurs sauf celui qui est connecté
+$user_id = $_SESSION['user_id'];
+$query = "SELECT * FROM users WHERE id != $user_id";
 $result = mysqli_query($conn, $query);
+
 ?>
 
 <?php include('includes/admin_header.php'); ?>
 
-<h2>Gestion des Utilisateurs</h2>
+<h2 class="h2-admin">Gestion des Utilisateurs</h2>
 <table>
     <tr>
+        <th>Prénom</th>
         <th>Nom</th>
         <th>Email</th>
         <th>Rôle</th>
@@ -25,12 +28,13 @@ $result = mysqli_query($conn, $query);
     </tr>
     <?php while ($user = mysqli_fetch_assoc($result)) { ?>
         <tr>
-            <td><?php echo $user['first_name'] . ' ' . $user['last_name']; ?></td>
+            <td><?php echo $user['last_name']; ?></td>
+            <td><?php echo $user['first_name']; ?></td>
             <td><?php echo $user['email']; ?></td>
             <td><?php echo $user['role']; ?></td>
             <td>
-                <a href="edit_user.php?id=<?php echo $user['id']; ?>">Modifier</a>
-                <a href="delete_user.php?id=<?php echo $user['id']; ?>" onclick="return confirm('Êtes-vous sûr ?');">Supprimer</a>
+                <a class="edit-button-admin" href="edit_user.php?id=<?php echo $user['id']; ?>">Modifier</a>
+                <a class="delete-button-admin" href="delete_user.php?id=<?php echo $user['id']; ?>" onclick="return confirm('Êtes-vous sûr ?');">Supprimer</a>
             </td>
         </tr>
     <?php } ?>
