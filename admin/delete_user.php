@@ -14,10 +14,14 @@ if (isset($_GET['id'])) {
     // Supprimer l'utilisateur
     $query = "DELETE FROM users WHERE id = $user_id";
     if (mysqli_query($conn, $query)) {
-        echo "Utilisateur supprimé avec succès.";
+        $message = "Utilisateur supprimé avec succès.";  // Message de succès
     } else {
-        echo "Erreur lors de la suppression de l'utilisateur.";
+        $message = "Erreur lors de la suppression de l'utilisateur.";  // Message d'erreur
     }
 } else {
-    echo "Erreur : ID d'utilisateur manquant.";
+    $message = "Erreur : ID d'utilisateur manquant.";
 }
+
+// Redirection vers la page de gestion des utilisateurs avec le message
+header("Location: user_management.php");
+exit();

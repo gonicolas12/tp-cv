@@ -12,10 +12,15 @@ if ($_SESSION['role'] != 'admin') {
 $user_id = $_SESSION['user_id'];
 $query = "SELECT * FROM users WHERE id != $user_id";
 $result = mysqli_query($conn, $query);
-
 ?>
 
 <?php include('includes/admin_header.php'); ?>
+
+<?php
+if (isset($_GET['message'])) {
+    echo "<script>alert('" . htmlspecialchars($_GET['message']) . "');</script>";
+}
+?>
 
 <h2 class="h2-admin">Gestion des Utilisateurs</h2>
 <table>
