@@ -10,6 +10,29 @@ Le TP-CV est un projet qui consiste à créer un portfolio en PHP !
 - Une page **contact** est disponible pour me contacter via mail.
 - Un **pannel admin** est disponible pour ceux qui y ont accès.
 
+## Structure du projet
+
+- **admin/**  
+  Ce dossier contient des fichiers liés à la gestion des utilisateurs, y compris l'ajout, la suppression et la modification des comptes. Il inclut également un sous-dossier `includes` pour les en-têtes d'administration.
+
+- **assets/**  
+  Ce dossier regroupe les fichiers nécessaires à la mise en forme et à l'interaction du site. On y trouve des sous-dossiers pour le CSS, les images et les fichiers JavaScript.
+
+  - **css/** : Styles pour les différentes pages du site.
+  - **img/** : Images utilisées dans le projet.
+
+- **includes/**  
+  Ce dossier rassemble des fichiers d'inclusion utilisés dans le projet, tels que la connexion à la base de données et les en-têtes/pieds de page.
+
+- **sql/**  
+  Contient le fichier de création de la base de données et des tables nécessaires au bon fonctionnement de l'application.
+
+- **uploads/**  
+  Ce dossier est destiné aux fichiers téléchargés par les utilisateurs, tels que les CV en format PDF.
+
+- **vendor/**  
+  Ce dossier contient les dépendances du projet, gérées par Composer. On y trouve la bibliothèque PHPMailer pour l'envoi d'emails, ainsi que d'autres fichiers de configuration.
+
 ## Lancement du Projet
 
 Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet :
