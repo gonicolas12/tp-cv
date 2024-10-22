@@ -20,13 +20,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_result = mysqli_query($conn, $check_query);
 
     if (mysqli_num_rows($check_result) > 0) {
-        // Si l'email existe déjà
-        echo "Email déjà utilisé.";
+        // Stocker l'erreur dans une variable de session
+        $_SESSION['error'] = "Email déjà utilisé.";
+        $_SESSION['old_data'] = $_POST; // Stocker les données saisies
+        header("Location: index.php"); // Redirection vers index.php
+        exit();
     } else {
         // Si l'email est unique, insérer l'utilisateur
         $query = "INSERT INTO users (first_name, last_name, email, password, role) VALUES ('$first_name', '$last_name', '$email', '$password', '$role')";
         mysqli_query($conn, $query);
-        echo "Utilisateur ajouté.";
+        // Redirection après l'ajout
         header("Location: index.php");
+        exit();
     }
 }
+?>

@@ -55,3 +55,9 @@ td {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.error-message-admin {
+    color: red;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
