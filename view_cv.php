@@ -23,6 +23,17 @@ if (!$cv) {
     <?php include 'includes/footer.php'; ?>
 <?php
 } else {
+    // Gestion de la suppression du CV
+    if (isset($_GET['delete_cv'])) {
+        $delete_query = "DELETE FROM cvs WHERE user_id = $user_id";
+        if (mysqli_query($conn, $delete_query)) {
+            echo "CV supprimé avec succès.";
+            header("Location: cv.php");
+            exit();
+        } else {
+            echo "Erreur lors de la suppression du CV : " . mysqli_error($conn);
+        }
+    }
 ?>
     <?php include 'includes/header.php'; ?>
 
@@ -37,6 +48,8 @@ if (!$cv) {
     <?php endif; ?>
 
     <a href="cv.php">Modifier mon CV</a>
+
+    <a href="?delete_cv=1" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce CV ?');">Supprimer mon CV</a>
 
     <?php include 'includes/footer.php'; ?>
 <?php

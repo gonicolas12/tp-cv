@@ -34,16 +34,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cv_file_tmp = $_FILES['cv_file']['tmp_name'];
         $cv_file_destination = 'uploads/' . $cv_file_name;
 
-        // Déplacer le fichier uploadé vers le dossier uploads
-        if (move_uploaded_file($cv_file_tmp, $cv_file_destination)) {
-            echo "Fichier uploadé avec succès<br>";
+        // Vérifier si le fichier est bien un PDF
+        if ($_FILES['cv_file']['type'] == 'application/pdf') {
+            // Déplacer le fichier uploadé vers le dossier uploads
+            if (move_uploaded_file($cv_file_tmp, $cv_file_destination)) {
+                echo "Fichier uploadé avec succès<br>";
+            } else {
+                echo "Erreur lors de l'upload du fichier.";
+            }
         } else {
-            echo "Erreur lors de l'upload du fichier.";
+            echo "Veuillez télécharger uniquement des fichiers PDF.";
         }
     }
 
     // Vérifier si un CV existe pour cet utilisateur
-    if ($cv) {
+    if (mysqli_num_rows($result) > 0) {
         // Mettre à jour le CV
         $query = "UPDATE cvs SET title = '$title', description = '$description'";
         if (!empty($cv_file_destination)) {
