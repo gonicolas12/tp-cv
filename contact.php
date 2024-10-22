@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Destinataires
         $mail->setFrom('projectynov@gmail.com', $_POST['name']);
-        $mail->addAddress('projectynov@gmail.com'); // Destinataire (ton adresse email)
+        $mail->addAddress('projectynov@gmail.com');
 
         // Contenu
         $mail->isHTML(true);

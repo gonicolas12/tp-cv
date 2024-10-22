@@ -40,7 +40,6 @@ if (session_status() === PHP_SESSION_NONE) {
                         <?php endif; ?>
                     </li>
 
-                    <!-- Si le rôle est défini, affiche-le correctement -->
                     <?php if (isset($_SESSION['role'])): ?>
                         <?php if ($_SESSION['role'] == 'admin'): ?>
                             <li style="float: right;">Rôle : <a href="/tp-cv/admin/index.php">admin</a></li>
@@ -58,4 +57,3 @@ if (session_status() === PHP_SESSION_NONE) {
     </header>
 
     <main>
-        <!-- Contenu principal de la page -->

@@ -15,7 +15,7 @@ if (isset($_GET['delete'])) {
     $user_id = $_GET['delete'];
     $query = "DELETE FROM users WHERE id = $user_id";
     mysqli_query($conn, $query);
-    header("Location: index.php"); // Redirige après suppression
+    header("Location: index.php");
 }
 
 // Récupérer tous les utilisateurs
@@ -30,7 +30,6 @@ unset($_SESSION['error'], $_SESSION['old_data']);
 
 <?php include('./includes/admin_header.php'); ?>
 
-<!-- Formulaire pour ajouter un utilisateur -->
 <h2>Ajouter un Utilisateur</h2>
 <form method="post" action="add_user.php">
     <label>Prénom:</label>
@@ -58,4 +57,4 @@ unset($_SESSION['error'], $_SESSION['old_data']);
     </button>
 </form>
 
-<?php include('../includes/footer.php'); ?> 
+<?php include('../includes/footer.php'); ?>

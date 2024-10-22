@@ -2,9 +2,9 @@
 session_start();
 
 // Définir le chemin des polices
-define('FPDF_FONTPATH', 'fpdf/font/');  // Chemin vers le dossier des polices
+define('FPDF_FONTPATH', 'fpdf/font/');
 
-require('fpdf/fpdf.php');  // Inclusion de la bibliothèque FPDF
+require('fpdf/fpdf.php');
 include('includes/db.php');
 
 // Vérifier que l'utilisateur est connecté
@@ -27,5 +27,5 @@ $pdf->Cell(40, 10, $cv['title']);
 $pdf->Ln();
 $pdf->SetFont('Arial', '', 12);
 $pdf->MultiCell(0, 10, $cv['description']);
-$pdf->Output('D', 'cv.pdf');  // Télécharge le PDF avec un nom
+$pdf->Output('D', 'cv.pdf');
 ?>

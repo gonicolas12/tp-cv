@@ -22,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($check_result) > 0) {
         // Stocker l'erreur dans une variable de session
         $_SESSION['error'] = "Email déjà utilisé.";
-        $_SESSION['old_data'] = $_POST; // Stocker les données saisies
-        header("Location: index.php"); // Redirection vers index.php
+        $_SESSION['old_data'] = $_POST;
+        header("Location: index.php");
         exit();
     } else {
         // Si l'email est unique, insérer l'utilisateur

@@ -39,4 +39,3 @@ if (session_status() === PHP_SESSION_NONE) {
     </header>
 
     <main>
-        <!-- Contenu principal de la page -->

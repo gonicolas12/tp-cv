@@ -37,4 +37,3 @@ if ($_SESSION['role'] != 'admin') {
     </header>
 
     <main>
-        <!-- Contenu principal pour l'administration -->
