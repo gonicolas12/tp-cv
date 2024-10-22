@@ -1,57 +1,76 @@
-.button-icon-git {
+.project-list {
     display: flex;
-    border: 3px #fff solid;
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
-}
-
-.icon-git {
-    background-color: #fff;
-    padding: 10px 10px 5px 10px;
-}
-
-.icon-git svg {
-    width: 50px;
-    height: 50px;
-}
-
-.cube-git {
-    transition: all 0.4s;
-    transform-style: preserve-3d;
-    width: 400px;
-    height: 42px;
-}
-
-.button-icon-git:hover {
-    border-color: #ff4655;
-}
-
-.button-icon-git:hover .cube-git {
-    transform: rotateX(90deg);
-}
-
-.side-git {
-    position: absolute;
-    height: 69px;
-    width: 400px;
-    display: flex;
-    font-size: 1.2em;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: bold;
+    gap: 15px;
+    padding: 20px;
 }
 
-.top-git {
-    background: #ff4655;
+.project-item {
+    background-color: #333;
     color: #fff;
-    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-.front-git {
-    background: #222229;
+.project-item h3,
+.project-item p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    flex: 1;
+}
+
+.delete-button {
+    background-color: #ff4655;
     color: #fff;
-    transform: translate3d(0, 0, 1em);
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: auto;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+.add-project-button {
+    margin-top: 15px;
+}
+
+.project-title {
+    margin-top: -60px;
+}
+
+@media (max-width: 767px) {
+    .project-item {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-item {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-item {
+        width: 300px;
+        height: 200px;
+    }
 }

@@ -24,17 +24,17 @@ if (session_status() === PHP_SESSION_NONE) {
         <nav>
             <ul>
                 <li><a href="/tp-cv/index.php">Accueil</a></li>
-                <li><a href="/tp-cv/projects.php">Projets</a></li>
-                <li><a href="/tp-cv/contact.php">Contact</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="/tp-cv/add_projects.php">Ajouter un Projet</a></li>
+                    <li><a href="/tp-cv/projects.php">Mes projets</a></li>
                     <li><a href="/tp-cv/cv.php">Mon CV</a></li>
                     <li><a href="/tp-cv/view_cv.php">Voir mon CV</a></li>
                     <li><a href="/tp-cv/profile.php">Profil</a></li>
                     <li><a href="/tp-cv/logout.php">Déconnexion</a></li>
                     <li>
-                        Bienvenue, 
+                        Bienvenue,
                         <?php if (isset($_SESSION['first_name'])): ?>
-                            <?php echo $_SESSION['first_name']; ?>
+                            <?php echo htmlspecialchars($_SESSION['first_name']); ?>
                         <?php else: ?>
                             Invité
                         <?php endif; ?>
@@ -52,6 +52,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php else: ?>
                     <li><a href="/tp-cv/login.php">Connexion</a></li>
                 <?php endif; ?>
+                <li><a href="/tp-cv/contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>
