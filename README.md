@@ -13,10 +13,10 @@ Le TP-CV est un projet qui consiste à créer un portfolio en PHP !
 ## Structure du projet
 
 - **admin/**  
-  Ce dossier contient des fichiers liés à la gestion des utilisateurs, y compris l'ajout, la suppression et la modification des comptes. Il inclut également un sous-dossier `includes` pour les en-têtes d'administration.
+  Ce dossier contient des fichiers liés à la gestion des utilisateurs, l'ajout, la suppression et la modification des comptes. Il inclut également un sous-dossier `includes` pour les en-têtes d'administration.
 
 - **assets/**  
-  Ce dossier regroupe les fichiers nécessaires à la mise en forme et à l'interaction du site. On y trouve des sous-dossiers pour le CSS, les images et les fichiers JavaScript.
+  Ce dossier regroupe les fichiers nécessaires à la mise en forme et à l'interaction du site.
 
   - **css/** : Styles pour les différentes pages du site.
   - **img/** : Images utilisées dans le projet.
