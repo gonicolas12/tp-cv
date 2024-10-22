@@ -2,6 +2,14 @@
 
 Le TP-CV est un projet qui consiste à créer un portfolio en PHP !
 
+## Fonctionnalitées
+
+- **Ajouter un projet** et le **supprimer** est possible sur mon tp-cv.
+- Vous pouvez **poster**, **modifier**, **télécharger** et **supprimer** votre CV sur ma plateforme.
+- Vous pouvez modifier votre **profil**
+- Une page **contact** est disponible pour me contacter via mail.
+- Un **pannel admin** est disponible pour ceux qui y ont accès.
+
 ## Lancement du Projet
 
 Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet :
