@@ -52,14 +52,14 @@ Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet 
    cd tp-cv
     ```
 
-2. **Démarrez XAMPP** :
+2. **Placez** le projet :
+
+   - Copiez le dossier tp-cv dans le dossier htdocs de XAMPP. Par défaut, cela se trouve dans **C:\xampp\htdocs**.
+
+3. **Démarrez XAMPP** :
 
    - Ouvrez le panneau de contrôle de XAMPP
    - Démarrez les services Apache et MySQL
-
-3. **Placez** le projet :
-
-   - Copiz le dossier de projet dans le dossier htdocs de XAMPP. Par défaut, cela se trouve dans **C:\xampp\htdocs**.
 
 4. **Accédez au projet** en ouvrant votre navigateur web sur ce lien -> http://localhost/tp-cv/index.php.
 
