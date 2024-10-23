@@ -31,18 +31,26 @@ if (isset($_GET['message'])) {
         <th>Rôle</th>
         <th>Actions</th>
     </tr>
-    <?php while ($user = mysqli_fetch_assoc($result)) { ?>
-        <tr>
-            <td><?php echo $user['last_name']; ?></td>
-            <td><?php echo $user['first_name']; ?></td>
-            <td><?php echo $user['email']; ?></td>
-            <td><?php echo $user['role']; ?></td>
-            <td>
-                <a class="edit-button-admin" href="edit_user.php?id=<?php echo $user['id']; ?>">Modifier</a>
-                <a class="delete-button-admin" href="delete_user.php?id=<?php echo $user['id']; ?>" onclick="return confirm('Êtes-vous sûr ?');">Supprimer</a>
-            </td>
-        </tr>
-    <?php } ?>
+    <tbody>
+    <?php
+    if (mysqli_num_rows($result) > 0) {
+        while ($user = mysqli_fetch_assoc($result)) {
+            echo "<tr>
+                    <td>{$user['first_name']}</td>
+                    <td>{$user['last_name']}</td>
+                    <td>{$user['email']}</td>
+                    <td>{$user['role']}</td>
+                    <td>
+                        <a class='edit-button-admin' href='edit_user.php?id={$user['id']}'>Modifier</a>
+                        <a class='delete-button-admin' href='delete_user.php?id={$user['id']}' onclick='return confirm(\"Êtes-vous sûr ?\");'>Supprimer</a>
+                    </td>
+                  </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='5'>Aucun utilisateur trouvé.</td></tr>";
+    }
+    ?>
+    </tbody>
 </table>
 
 <?php include('../includes/footer.php'); ?>
