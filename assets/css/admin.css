@@ -4,6 +4,19 @@
     font-size: 200%;
 }
 
+.h2-admin-2 {
+    margin-top: -100px;
+    margin-bottom: 80px;
+    font-size: 200%;
+    margin-left: 30%;
+}
+
+.delete-admin-form {
+    margin: 0;
+    padding: 0;
+    display: inline; 
+}
+
 th {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -60,4 +73,19 @@ td {
     color: red;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.delete-button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #ff4655;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0; /* Retirer les marges */
+    transition: background-color 0.3s;
+    align-self: flex-start;
+    border: none; /* Enlever toute bordure qui pourrait ajouter un espace */
 }

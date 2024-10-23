@@ -30,6 +30,7 @@ if ($_SESSION['role'] != 'admin') {
                 <li><a href="/tp-cv/index.php">Accueil</a></li>
                 <li><a href="/tp-cv/admin/index.php">Ajouter Utilisateur</a></li>
                 <li><a href="/tp-cv/admin/user_management.php">Liste Utilisateurs</a></li>
+                <li><a href="/tp-cv/admin/manage_projects.php">Liste Projets</a></li>
                 <li><a href="/tp-cv/logout.php">Déconnexion</a></li>
                 <li>Admin : <?php echo $_SESSION['first_name']; ?></li>
             </ul>
