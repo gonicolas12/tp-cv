@@ -17,7 +17,7 @@
                         </g>
 
                     </svg>
-                    <h3>Bienvenue sur mon Portfolio !</h3>
+                    <h3>Bienvenue sur votre Portfolio !</h3>
                 </div>
             </div>
             <div class="front">
@@ -35,7 +35,7 @@
                     <div class="description">
                         <div class="title">
                         <div class="text-container">
-                        <p>Découvrez mes projets et mon parcours professionnel.</p>
+                        <p>Postez vos projets et votre parcours professionnel.</p>
                         </div>
                         </div>
                     </div>
