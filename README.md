@@ -55,14 +55,14 @@ Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet 
 
 3. **Démarrez XAMPP** :
 
-   - Ouvrez le panneau de contrôle de XAMPP
-   - Démarrez les services Apache et MySQL
+   - Ouvrez le panneau de contrôle de **XAMPP**
+   - Démarrez les services **Apache** et **MySQL**
 
 4. **Copiez la base de donnée** :
 
    - Ouvrez http://localhost/phpmyadmin/
    - Créez une nouvelle base de données nommée "**tp-cv**"
-   - Copiez le contenu du fichier **sql\tp-cv.sql**
+   - Copiez le contenu du fichier **tp-cv.sql** qui se trouve dans le dossier **sql**
    - Collez ce contenu dans la catégorie "**SQL**" dans la base de donnée "**tp-cv**" que vous avez créé
 
 5. **Accédez au projet** en ouvrant votre navigateur web sur ce lien -> http://localhost/tp-cv/index.php.
