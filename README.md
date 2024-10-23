@@ -68,3 +68,8 @@ Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet 
 
 - [@nicolasgouy](https://www.github.com/gonicolas12)
 
+### Identifiants compte Admin :
+
+- Email : mm@ll.com
+- Mot de passe : 123
+

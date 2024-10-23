@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 23 oct. 2024 à 13:57
+-- Généré le : mer. 23 oct. 2024 à 14:03
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -47,6 +47,13 @@ CREATE TABLE `projects` (
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `projects`
+--
+
+INSERT INTO `projects` (`id`, `user_id`, `title`, `description`) VALUES
+(71, 6, 'test', 'test');
 
 -- --------------------------------------------------------
 
@@ -110,7 +117,7 @@ ALTER TABLE `cvs`
 -- AUTO_INCREMENT pour la table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT pour la table `users`
