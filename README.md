@@ -43,13 +43,13 @@ Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet 
 
 ### Installation et Exécution
 
-1. **Clonez le dépôt** avec la commande suivante :
+1. **Clonez le dépôt avec la commande suivante** :
 
    ```bash
    git clone https://github.com/gonicolas12/tp-cv.git
    ```
 
-2. **Placez** le projet :
+2. **Placez le projet** :
 
    - Copiez le dossier tp-cv dans le dossier htdocs de XAMPP. Par défaut, cela se trouve dans **C:\xampp\htdocs**.
 
@@ -60,19 +60,19 @@ Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet 
 
 4. **Copiez la base de donnée** :
 
-  - Ouvrez http://localhost/phpmyadmin/
-  - Créez une nouvelle base de données nommée "tp-cv"
-  - Copiez le contenu du fichier sql\tp-cv.sql
-  - Collez ce contenu dans la catégorie "SQL" dans la base de donnée "tp-cv" que vous avez créé
+   - Ouvrez http://localhost/phpmyadmin/
+   - Créez une nouvelle base de données nommée "**tp-cv**"
+   - Copiez le contenu du fichier **sql\tp-cv.sql**
+   - Collez ce contenu dans la catégorie "**SQL**" dans la base de donnée "**tp-cv**" que vous avez créé
 
 5. **Accédez au projet** en ouvrant votre navigateur web sur ce lien -> http://localhost/tp-cv/index.php.
 
 
 ### Identifiants compte Admin :
 
-- Email : mm@ll.com
-- Mot de passe : 123
+   - Email : mm@ll.com
+   - Mot de passe : 123
 
 ### Auteur :
 
-- [@nicolasgouy](https://www.github.com/gonicolas12)
+   - [@nicolasgouy](https://www.github.com/gonicolas12)
