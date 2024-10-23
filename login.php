@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="button_text">Se connecter</span>
         </span>
     </button> <?php if (isset($error)) echo "<p>$error</p>"; ?>
+    <p><a class="sign-in-button" href="register.php">Créer un compte</a></p>
 </form>
 
 <?php include 'includes/footer.php'; ?>

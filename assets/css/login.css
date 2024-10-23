@@ -180,3 +180,8 @@ textarea {
 .login-form {
     width: 180px;
 }
+
+.sign-in-button {
+    color: #0f1923;
+    margin-left: 12%;
+}
