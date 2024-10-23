@@ -64,12 +64,11 @@ Pour démarrer le projet, suivez ces étapes pour installer et lancer le projet 
 4. **Accédez au projet** en ouvrant votre navigateur web sur ce lien -> http://localhost/tp-cv/index.php.
 
 
-### Auteur :
-
-- [@nicolasgouy](https://www.github.com/gonicolas12)
-
 ### Identifiants compte Admin :
 
 - Email : mm@ll.com
 - Mot de passe : 123
 
+### Auteur :
+
+- [@nicolasgouy](https://www.github.com/gonicolas12)
