@@ -84,8 +84,8 @@ td {
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    margin: 0; /* Retirer les marges */
+    margin: 0;
     transition: background-color 0.3s;
     align-self: flex-start;
-    border: none; /* Enlever toute bordure qui pourrait ajouter un espace */
+    border: none;
 }

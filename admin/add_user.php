@@ -29,9 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Si l'email est unique, insérer l'utilisateur
         $query = "INSERT INTO users (first_name, last_name, email, password, role) VALUES ('$first_name', '$last_name', '$email', '$password', '$role')";
         mysqli_query($conn, $query);
-        // Redirection après l'ajout
         header("Location: index.php");
         exit();
     }
 }
-?>

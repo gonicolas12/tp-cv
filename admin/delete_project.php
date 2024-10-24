@@ -1,5 +1,4 @@
 <?php
-// Inclure le fichier de connexion à la base de données
 include '../includes/db.php';
 
 session_start();
@@ -20,10 +19,8 @@ if (isset($_POST['project_id'])) {
     $stmt->execute();
     $stmt->close();
 
-    // Rediriger vers la page de gestion des projets
     header('Location: manage_projects.php');
     exit();
 }
 
 $conn->close();
-?>

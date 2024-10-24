@@ -34,9 +34,9 @@
                 <div class="front-content">
                     <div class="description">
                         <div class="title">
-                        <div class="text-container">
-                        <p>Postez vos projets et votre parcours professionnel.</p>
-                        </div>
+                            <div class="text-container">
+                                <p>Publiez vos projets et votre parcours professionnel.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

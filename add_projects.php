@@ -8,7 +8,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Initialiser les variables pour les messages
 $title = '';
 $description = '';
 $message = '';

@@ -32,10 +32,10 @@ if (isset($_GET['message'])) {
         <th>Actions</th>
     </tr>
     <tbody>
-    <?php
-    if (mysqli_num_rows($result) > 0) {
-        while ($user = mysqli_fetch_assoc($result)) {
-            echo "<tr>
+        <?php
+        if (mysqli_num_rows($result) > 0) {
+            while ($user = mysqli_fetch_assoc($result)) {
+                echo "<tr>
                     <td>{$user['first_name']}</td>
                     <td>{$user['last_name']}</td>
                     <td>{$user['email']}</td>
@@ -45,11 +45,11 @@ if (isset($_GET['message'])) {
                         <a class='delete-button-admin' href='delete_user.php?id={$user['id']}' onclick='return confirm(\"Êtes-vous sûr ?\");'>Supprimer</a>
                     </td>
                   </tr>";
+            }
+        } else {
+            echo "<tr><td colspan='5'>Aucun utilisateur trouvé.</td></tr>";
         }
-    } else {
-        echo "<tr><td colspan='5'>Aucun utilisateur trouvé.</td></tr>";
-    }
-    ?>
+        ?>
     </tbody>
 </table>
 

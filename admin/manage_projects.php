@@ -1,5 +1,4 @@
 <?php
-// Inclure le fichier de connexion à la base de données
 include '../includes/db.php';
 
 // Vérifier si l'utilisateur est connecté et est un administrateur
@@ -52,6 +51,7 @@ $result = $conn->query($query);
 </div>
 
 </body>
+
 </html>
 
 <?php

@@ -19,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "INSERT INTO users (first_name, last_name, email, password, role) VALUES ('$first_name', '$last_name', '$email', '$password', 'user')";
 
         if (mysqli_query($conn, $query)) {
-            // Redirection vers la page de connexion après la création du compte
             header("Location: login.php");
             exit();
         } else {
@@ -39,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <form class="register-form" method="post" action="">
     <label>Prénom:</label>
     <input name="first_name" required>
-    
+
     <label>Nom:</label>
     <input name="last_name" required>
 
