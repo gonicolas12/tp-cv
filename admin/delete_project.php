@@ -9,9 +9,9 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     exit();
 }
 
-// Vérifier si l'ID du projet est envoyé
-if (isset($_POST['project_id'])) {
-    $project_id = $_POST['project_id'];
+// Vérifier si l'ID du projet est envoyé via GET
+if (isset($_GET['id'])) {
+    $project_id = $_GET['id'];
 
     // Requête pour supprimer le projet
     $stmt = $conn->prepare("DELETE FROM projects WHERE id = ?");

@@ -37,7 +37,7 @@ $result = $conn->query($query);
                             <td>
                                 <form class='delete-admin-form' action='delete_project.php' method='POST' style='display:inline;'>
                                     <input type='hidden' name='project_id' value='{$row['id']}'>
-                                    <button type='submit' class='delete-button'>Supprimer</button>
+                                        <a class='delete-button-admin-projects' href='delete_project.php?id={$row['id']}' onclick='return confirm(\"Êtes-vous sûr de vouloir supprimer ce projet ?\");'>Supprimer</a>
                                 </form>
                             </td>
                           </tr>";
