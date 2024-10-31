@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-$message = ""; // Variable pour stocker le message de confirmation ou d'erreur
+$message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Configuration du serveur SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Serveur SMTP de Gmail
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'projectynov@gmail.com';
         $mail->Password = 'tlef votn psyr hjgq';
-        $mail->SMTPSecure = 'tls'; // Activer le chiffrement TLS
+        $mail->SMTPSecure = 'tls';
         $mail->Port = 587; // Port TCP pour TLS
 
         // Destinataires
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Envoi de l'email
         $mail->send();
-        $message = "Mail envoyé avec succès !"; // Message de confirmation
+        $message = "Mail envoyé avec succès !";
     } catch (Exception $e) {
         $message = "Erreur lors de l'envoi du message. Mailer Error: {$mail->ErrorInfo}";
     }
