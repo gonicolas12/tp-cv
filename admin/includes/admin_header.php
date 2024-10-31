@@ -15,7 +15,7 @@ if ($_SESSION['role'] != 'admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration - Mon CV/Portfolio</title>
-    <link rel="icon" href="../../assets/img/user-solid.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/img/user-solid.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/tp-cv/assets/css/home.css">
     <link rel="stylesheet" href="/tp-cv/assets/css/login.css">
     <link rel="stylesheet" href="/tp-cv/assets/css/admin.css">
