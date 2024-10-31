@@ -1,8 +1,11 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
+
+$message = ""; // Variable pour stocker le message de confirmation ou d'erreur
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
@@ -29,8 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Envoi de l'email
         $mail->send();
+        $message = "Mail envoyé avec succès !"; // Message de confirmation
     } catch (Exception $e) {
-        echo "Erreur lors de l'envoi du message. Mailer Error: {$mail->ErrorInfo}";
+        $message = "Erreur lors de l'envoi du message. Mailer Error: {$mail->ErrorInfo}";
     }
 }
 ?>
@@ -39,6 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <main>
     <h2>Contactez-moi</h2>
+
+    <?php if (!empty($message)): ?>
+        <p><?php echo $message; ?></p>
+    <?php endif; ?>
+
     <form method="post" action="">
         <label>Nom:</label>
         <input type="text" name="name" required>
